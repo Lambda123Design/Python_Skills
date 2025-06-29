@@ -3,6 +3,7 @@
 Following are my Python Skills:
 
 1. **Basics Python:**
+   
 (I) **Basics Python:**
 
   (i) Syntax and Semantics
@@ -50,5 +51,7 @@ Following are my Python Skills:
 3. **Exception Handling**:
 
   (i) Try, Except Block
+  
   (ii) Try, Except, Else Block
+  
   (iii) Try, Except, Else, Finally Block
