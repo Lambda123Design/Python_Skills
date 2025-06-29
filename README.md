@@ -36,5 +36,5 @@ Following are my Python Skills:
 
 **File Handling**:
     (i) File Operation - With Open (r-Read, w-Write,a-Append,wb-WriteBytes,w+ - Read and Write); file.write,file.writelines, file.seek(0) - Takes the cursor to the beginning while read and write.
-    
-    (ii) Working with File Paths - mkdir - Make Directory, listdir - List Directory, getcwd - Current Working Directory, path.exists - Check if path exists, .isfile - Check if it is a file, .isdir - Check if it is a directory, path.abspath - Gives Absolute path
+   
+   (ii) Working with File Paths - mkdir - Make Directory, listdir - List Directory, getcwd - Current Working Directory, path.exists - Check if path exists, .isfile - Check if it is a file, .isdir - Check if it is a directory, path.abspath - Gives Absolute path
