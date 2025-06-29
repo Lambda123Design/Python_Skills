@@ -4,13 +4,13 @@ Following are my Python Skills:
 
 1. **Basics Python:**
    
-(I) **Basics Python:**
+(A) **Basics Python:**
 
   (i) Syntax and Semantics
   
   (ii) Single and Multi Line Commands
 
-(II). **Variables:**
+(B). **Variables:**
    (i) Declaring and Assigning Variables
    
    (ii) Naming Conventions
@@ -21,22 +21,22 @@ Following are my Python Skills:
    
    (v) Dynamic Typing
 
-(III) . **Data Types:**
+(C) . **Data Types:**
    (i) Basic Data Types: int, float, boolean, str
    (ii) Type Conversion
 
-(IV) . **Operators:**
+(D) . **Operators:**
    (i) Arithmetic Operators - Addition, Multiplication, Division, Floor Divison, Modulus, Exponential
    (ii) Comparison Operators - Equal to, Not equal to, Greater than, Lesser than, Greater than or equal to, Lesser than or equal to
    (iii) Logical Operators - AND, OR, NOT
 
-(V). **Conditional Statements:**
+(E). **Conditional Statements:**
    (i) if statement
    (ii) else statement
    (iii) elif statement
    (iv) Nested Conditional Statements
 
-(VI). **Loops:**
+(F). **Loops:**
    (i) for Loop: Iterating over a string, Iterating over a range
    (ii) while Loop
    (iii) Loop Control Statements: break, continue, pass
