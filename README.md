@@ -22,24 +22,36 @@ Following are my Python Skills:
    (v) Dynamic Typing
 
 (C) . **Data Types:**
+
    (i) Basic Data Types: int, float, boolean, str
+   
    (ii) Type Conversion
 
 (D) . **Operators:**
+
    (i) Arithmetic Operators - Addition, Multiplication, Division, Floor Divison, Modulus, Exponential
+   
    (ii) Comparison Operators - Equal to, Not equal to, Greater than, Lesser than, Greater than or equal to, Lesser than or equal to
+   
    (iii) Logical Operators - AND, OR, NOT
 
 (E). **Conditional Statements:**
+
    (i) if statement
+   
    (ii) else statement
+   
    (iii) elif statement
+   
    (iv) Nested Conditional Statements
 
 (F). **Loops:**
    (i) for Loop: Iterating over a string, Iterating over a range
+   
    (ii) while Loop
+   
    (iii) Loop Control Statements: break, continue, pass
+   
    (iv) Nested Loops
 
 2. **File Handling**:
