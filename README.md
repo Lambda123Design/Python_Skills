@@ -67,3 +67,16 @@ Following are my Python Skills:
   (ii) Try, Except, Else Block
   
   (iii) Try, Except, Else, Finally Block
+
+
+48. **Python for Data Analysis:**
+
+   (i) NumPy - (np.array), arr.reshape(1,5) - 2D will be in [[]], np.arrange(0,10,2).reshape(5,1) , np.ones ((3,1)), np.eye(3), 
+   
+   Universal Operations - arr1+arr2, arr1-arr2, arr1*arr2, np.sqrt(arr1), np.sin(arr1), np.log(arr), np.exp(arr)
+
+   Array Slicing and Indexing - arr[0][0], arr[1:,2:], a[0][0]=100
+
+   Statistical Concepts: Standardization and Normalization; np.mean(), np.median(), np.mode(), np.std(), np.var()
+
+   Logical operation: data=np.array([1,2,3,4,5,6,7,8,9,10]); data[(data>=5) & (data<=8)]
