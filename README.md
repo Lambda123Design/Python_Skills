@@ -80,3 +80,5 @@ Following are my Python Skills:
    Statistical Concepts: Standardization and Normalization; np.mean(), np.median(), np.mode(), np.std(), np.var()
 
    Logical operation: data=np.array([1,2,3,4,5,6,7,8,9,10]); data[(data>=5) & (data<=8)]
+
+   (ii) Pandas (DataFrame (2D) and Series (1D)) - pd.Series(data,index=index), pd.DataFrame(data), type(df['Name']) - Series, df.loc, df.iloc, df.at[1,'Age'], df.iat[2,2], df.drop('Salary',axis=1,inplace-True), df['Age']=df['Age']+1
