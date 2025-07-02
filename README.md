@@ -82,3 +82,11 @@ Following are my Python Skills:
    Logical operation: data=np.array([1,2,3,4,5,6,7,8,9,10]); data[(data>=5) & (data<=8)]
 
    (ii) Pandas (DataFrame (2D) and Series (1D)) - pd.Series(data,index=index), pd.DataFrame(data), type(df['Name']) - Series, df.loc, df.iloc, df.at[1,'Age'], df.iat[2,2], df.drop('Salary',axis=1,inplace-True), df['Age']=df['Age']+1
+
+   (iii) Data Analysis and Manipulation: Renaming Columns - df.rename(columns={'Date':'Sales Date'}); Change Datatypes - df[value_new]=df[value].astype(float); Lambda Function - df['Value_New']=df['Value'].apply(lambda x:x*2)
+
+   Data Aggregattion and Grouping - grouped_mean=df.groupby('Product')['Value'].mean()  
+                                    grouped_sum=df.groupby(['Product','Region'])['Value'].sum()
+                                    groudped_agg=df.groupby('Region')['Value'].agg(['mean','sum','count'])
+
+   Merging DataFrames: pd.merge(df1,df2,on="Key",how="inner")
