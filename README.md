@@ -2,6 +2,8 @@
 
 Following are my Python Skills:
 
+Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
+
 1. **Basics Python:**
    
 (A) **Basics Python:**
@@ -90,3 +92,7 @@ Following are my Python Skills:
                                     groudped_agg=df.groupby('Region')['Value'].agg(['mean','sum','count'])
 
    Merging DataFrames: pd.merge(df1,df2,on="Key",how="inner")
+
+   49. Read Data from Various Sources:
+
+df=pd.read_json(StringIO(Data)), df.to_json(orient='index'), df=pd.read_csv(),df.to_csv(), df=pd.read_html(url) (Need 3 Libraries - 'lxml, html5lib, beautifulsoup4'), pd.read_html(url,match="Country",header=0)[0], pd.read_excel  (Need openpyxl), df_excel.to_pickle(), pd.read_pickle(), 
