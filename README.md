@@ -338,8 +338,123 @@ start_vehicle(car)
    **Method Overriding - Method overriding allows a child class to provide a specific implementation of a method that is already defined in its parent class.**
 
    **Method Overriding: Let's say my Parent Class Dog makes sound as "whoof", My inherited child class makes sound as "whoof" "whoof" "whoof". It allows a child class to provide a specific implementation of a method that is already defined in its parent class**
-   
 
-   49. Read Data from Various Sources:
+
+  ** 49. Read Data from Various Sources:**
 
 df=pd.read_json(StringIO(Data)), df.to_json(orient='index'), df=pd.read_csv(),df.to_csv(), df=pd.read_html(url) (Need 3 Libraries - 'lxml, html5lib, beautifulsoup4'), pd.read_html(url,match="Country",header=0)[0], pd.read_excel  (Need openpyxl), df_excel.to_pickle(), pd.read_pickle(), 
+
+
+**50.SQLite and Python:**
+
+SQL (Structured Query Language) is a standard language for managing and manipulating relational databases. SQLite is a self-contained, serverless, and zero-configuration database engine that is widely used for embedded database systems. In this lesson, we will cover the basics of SQL and SQLite, including creating databases, tables, and performing various SQL operations.
+
+**It will create a DB in similar way that we have notebooks in Options in VS Code. We will also create a Cursor Object, so that it will iterate through rows and columns**
+
+**commit is important whenever we do a CRUD Operation**
+
+**Bulk Insert - Executemany**
+
+**Closing Connection - connection.close()**
+
+import sqlite3
+
+## Connect to an SQLite database
+connection=sqlite3.connect('example.db')
+connection
+
+cursor=connection.cursor()
+
+## Create a Table
+cursor.execute('''
+Create Table If Not Exists employees(
+    id Integer Primary Key,
+    name Text Not Null,
+    age Integer,
+    department text
+    )
+''')
+
+## Commit the changes
+connection.commit()
+
+## Insert the data in sqlite table
+cursor.execute('''
+Insert Into employees(name,age,department)
+               values('Krish',32,'Data Scientist')
+
+''')
+
+cursor.execute('''
+INSERT INTO employees (name, age, department)
+VALUES ('Bob', 25, 'Engineering')
+''')
+
+cursor.execute('''
+INSERT INTO employees (name, age, department)
+VALUES ('Charlie', 35, 'Finance')
+''')
+
+## commi the changes
+connection.commit()
+
+## Query the data from the table
+cursor.execute('Select * from employees')
+rows=cursor.fetchall()
+
+## print the queried data
+
+for row in rows:
+    print(row)
+
+**Refer Notebook for further working with SQLite**
+
+**52. Logging in Python:**
+
+**Logging is a crucial aspect of any application, providing a way to track events, errors, and operational information. Python's built-in logging module offers a flexible framework for emitting log messages from Python programs.**
+
+import logging
+
+## Configure the basic logging settings
+logging.basicConfig(level=logging.DEBUG)
+
+## log messages with different severity levels
+logging.debug("This is a debug message")
+logging.info("This is an info message")
+logging.warning("This is a warning message")
+logging.error("This is an error message")
+logging.critical("This is a critical message")
+
+#### Log Levels
+Python's logging module has several log levels indicating the severity of events. The default levels are:
+
+- DEBUG: Detailed information, typically of interest only when diagnosing problems.
+- INFO: Confirmation that things are working as expected.
+- WARNING: An indication that something unexpected happened or indicative of some problem in the near future (e.g., ‘disk space low’). The software is still working as expected.
+- ERROR: Due to a more serious problem, the software has not been able to perform some function.
+- CRITICAL: A very serious error, indicating that the program itself may be unable to continue running.
+
+  ## configuring logging
+import logging
+
+**Creates a Log File called app.log file in VS Code**
+
+**Once we configured the BASICCONFIG, unless we restart the Kernel, it won't change (Since it would have already been created)**
+
+**Once we have done the Configuration for the Logs, we can use anywhere**
+
+logging.basicConfig(
+    filename='app.log',
+    filemode='w',
+    level=logging.DEBUG,
+    format='%(asctime)s-%(name)s-%(levelname)s-%(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+    )
+
+## log messages with different severity levels
+logging.debug("This is a debug message")
+logging.info("This is an info message")
+logging.warning("This is a warning message")
+logging.error("This is an error message")
+logging.critical("This is a critical message")
+
