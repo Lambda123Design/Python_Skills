@@ -71,6 +71,72 @@ Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
   (iii) Try, Except, Else, Finally Block
 
 
+**21. OOPS with Class and Objects**
+
+Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to design applications and computer programs. OOP allows for modeling real-world scenarios using classes and objects. This lesson covers the basics of creating classes and objects, including instance variables and methods.
+
+   **(i) Class and Objects:**
+   
+   Class is a blue print for creating objects. Attributes,methods. class Car: pass; audi=Car(); **Car is a class and Audi is an Object of the class**
+
+   audi.windows=4; print(audi.windows) --> Windows is an attribute that is present inside the Object (This is not a proper way because if I create next for Tata.doors, I will get an error because I didn't create anything called as Windows for Tata) 
+
+   **We will learn an efficient way on how we can initialize the attributes while we are creating the objects itself**
+
+   dir(tata) --> If we give this, we can learn all the directiories inside this, we can see door inside it as we created it. 
+
+   **We will learn specifically about __init__ inside it. __init__ is known as Constructor**
+   
+   ## Instance Variables and Methods
+   class Dog:
+    ## constructor
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+**self is used Globally. We can use anything like Krish, Ashwath. But to use it inside the Method also we can use the Instance Variable**
+
+**We make sure that whenever we create an object we need to give 2 variables inside it. Self is responsible in accessing the instance variable inside the class itself whenever we create the object. Name is the Instance variable available inside the Dog Class. Two Parameters are name and age. If I print, it shows what instance variable is created at which Location. Whatever defined in the constructor only those can be mentioned**
+
+**Instance Variables - Theyare something that talks about Dog. Say name and age are something that talks about an Object (Attributes)**
+
+**Instance Methods - Methods are something say like a Dog can be Barking, It can be doing some kind of Functionalities, say it can be running at a specific speed**
+
+## Define a class with instance methods
+class Dog:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def bark(self):
+        print(f"{self.name} says woof")
+
+
+dog1=Dog("Buddy",3)
+dog1.bark()
+dog2=Dog("Lucy",4)
+dog2.bark()
+
+**Valid Examples:**
+
+## Define a class for bank account
+class BankAccount:
+    def __init__(self,owner,balance=0):
+        self.owner=owner
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance+=amount
+        print(f"{amount} is deposited. New balance is {self.balance}")
+    def withdraw(self,amount):
+        if amount>self.balance:
+            print("Insufficient funds!")
+        else:
+            self.balance-=amount
+            print(f"{amount} is withdrawn. New Balance is {self.balance}")
+    def get_balance(self):
+        return self.balance
+
+   **(ii) Inheritance:**
+
 48. **Python for Data Analysis:**
 
    (i) NumPy - (np.array), arr.reshape(1,5) - 2D will be in [[]], np.arrange(0,10,2).reshape(5,1) , np.ones ((3,1)), np.eye(3), 
