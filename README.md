@@ -75,6 +75,8 @@ Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
 
 Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to design applications and computer programs. OOP allows for modeling real-world scenarios using classes and objects. This lesson covers the basics of creating classes and objects, including instance variables and methods.
 
+**Object Example --> Calling from the Class; tesla1=Tesla(4,5,"electric",True) tesla1.selfdriving()**
+
    **(i) Class and Objects:**
    
    Class is a blue print for creating objects. Attributes,methods. class Car: pass; audi=Car(); **Car is a class and Audi is an Object of the class**
@@ -137,6 +139,66 @@ class BankAccount:
 
    **(ii) Inheritance:**
 
+   Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that allows a class to inherit attributes and methods from another class. This lesson covers single inheritance and multiple inheritance, demonstrating how to create and use them in Python.
+
+   ## Parent class
+class Car:
+    def __init__(self,windows,doors,enginetype):
+        self.windows=windows
+        self.doors=doors
+        self.enginetype=enginetype
+    def drive(self):
+        print(f"The person will drive the {self.enginetype} car ")
+
+   car1=Car(4,5,"petrol")
+   car1.drive()
+        
+   **Let's Say I have defined this class, and again I want to define another class "Tesla", I can inherit from here, I don't have to write my code again for the class "Tesla". Same in Tesla even we have windows, engines. Instead, we can inherit from earlier**
+
+   **Inheritance:**
+
+   **super --> Inheriting from Parent Class; class child_class(Parent_Class)**
+
+   **Single Inheritance:**
+  
+   class Tesla(Car):
+    def __init__(self,windows,doors,enginetype,is_selfdriving):
+        super().__init__(windows,doors,enginetype)
+        self.is_selfdriving=is_selfdriving
+    def selfdriving(self):
+        print(f"Tesla supports self driving : {self.is_selfdriving}")
+
+   tesla1=Tesla(4,5,"electric",True) tesla1.selfdriving()
+
+   **Multiple Inheritance: - When a class inherits from more than one base class**
+
+## Base class 1
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    def speak(self):
+        print("Subclass must implement this method")
+
+## BAse class 2
+class Pet:
+    def __init__(self, owner):
+        self.owner = owner
+
+##Derived class
+class Dog(Animal,Pet):
+    def __init__(self,name,owner):
+        Animal.__init__(self,name)
+        Pet.__init__(self,owner)
+    def speak(self):
+        return f"{self.name} say woof"
+    
+
+## Create an object
+dog=Dog("Buddy","Krish")
+print(dog.speak())
+print(f"Owner:{dog.owner}")
+
+
 48. **Python for Data Analysis:**
 
    (i) NumPy - (np.array), arr.reshape(1,5) - 2D will be in [[]], np.arrange(0,10,2).reshape(5,1) , np.ones ((3,1)), np.eye(3), 
@@ -158,6 +220,15 @@ class BankAccount:
                                     groudped_agg=df.groupby('Region')['Value'].agg(['mean','sum','count'])
 
    Merging DataFrames: pd.merge(df1,df2,on="Key",how="inner")
+
+   **(iii) Polymorphism:**
+
+   **Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It provides a way to perform a single action in different forms. Polymorphism is typically achieved through method overriding and interfaces**
+
+   **Method Overriding - Method overriding allows a child class to provide a specific implementation of a method that is already defined in its parent class.**
+
+   **Method Overriding: Let's say my Parent Class Dog makes sound as "whoof", My inherited child class makes sound as "whoof" "whoof" "whoof". It allows a child class to provide a specific implementation of a method that is already defined in its parent class**
+   
 
    49. Read Data from Various Sources:
 
