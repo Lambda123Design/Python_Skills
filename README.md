@@ -199,6 +199,116 @@ print(dog.speak())
 print(f"Owner:{dog.owner}")
 
 
+**(iii) Polymorphism:**
+
+**Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It provides a way to perform a single action in different forms. Polymorphism is typically achieved through method overriding and interfaces**
+
+**a) Polymorphism using Method Overriding:**
+
+**Method overriding allows a child class to provide a specific implementation of a method that is already defined in its parent class.**
+
+## Base Class
+class Animal:
+    def speak(self):
+        return "Sound of the animal"
+    
+## Derived Class 1
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+    
+## Derived class
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+    
+## Function that demonstrates polymorphism
+def animal_speak(animal):
+    print(animal.speak())
+    
+dog=Dog()
+cat=Cat()
+print(dog.speak())
+print(cat.speak())
+animal_speak(dog)
+
+**Method Overriding --> Same method is getting overridden in the derived class implementation**
+
+**We have Overridden from the Base Class till the Child Class**
+
+**Very Good Example Below for PolyMorphism using Functions and Methods**
+
+### Polymorphissm with Functions and MEthods
+## base class
+class Shape:
+    def area(self):
+        return "The area of the figure"
+    
+## Derived class 1
+class Rectangle(Shape):
+    def __init__(self,width,height):
+        self.width=width
+        self.height=height
+    def area(self):
+        return self.width * self.height
+    
+##DErived class 2
+
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        return 3.14*self.radius *self.radius
+    
+## Fucntion that demonstrates polymorphism
+
+def print_area(shape):
+    print(f"the area is {shape.area()}")
+
+
+rectangle=Rectangle(4,5)
+circle=Circle(3)
+
+print_area(rectangle)
+print_area(circle)
+
+**We are Over riding the Area formula again for a rectangle because the formula will be different. We are redifing the function for the derieved class**
+
+**b) Polymorphism using Interfaces:**
+
+**In other Programming languages we call it as Interfaces, but in Python we call it as Abstract Base Classes**
+
+**Abstract Base Classes (ABCs) are used to define common methods for a group of related objects. They can enforce that derived classes implement particular methods, promoting consistency across different implementations.**
+
+from abc import ABC,abstractmethod
+
+## Define an abstract class
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+## Derived class 1
+class Car(Vehicle):
+    def start_engine(self):
+        return "Car enginer started"
+    
+## Derived class 2
+class Motorcycle(Vehicle):
+    def start_engine(self):
+        return "Motorcycle enginer started"
+    
+# Function that demonstrates polymorphism
+def start_vehicle(vehicle):
+    print(vehicle.start_engine())
+
+## create objects of cAr and Motorcycle
+
+car = Car()
+motorcycle = Motorcycle()
+
+start_vehicle(car)
+
 48. **Python for Data Analysis:**
 
    (i) NumPy - (np.array), arr.reshape(1,5) - 2D will be in [[]], np.arrange(0,10,2).reshape(5,1) , np.ones ((3,1)), np.eye(3), 
