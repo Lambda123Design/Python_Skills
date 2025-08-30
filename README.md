@@ -4,6 +4,8 @@ Following are my Python Skills:
 
 Python Faker Library used to create syntentic data - To generate synthetic real-time transactions, I will use the Python library Faker. [Used in Grafana Project in MLOps Course]
 
+Pytest library is used for unit testing. It is capable of executing Python unit test cases [Used in Automate Testing Workflow With Python in MLOps Course]
+
 Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
 
 1. **Basics Python:**
