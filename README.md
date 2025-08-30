@@ -2,7 +2,7 @@
 
 Following are my Python Skills:
 
-Python Faker Library used to create syntentic data - To generate synthetic real-time transactions, I will use the Python library Faker. [Used in Grafana Project]
+Python Faker Library used to create syntentic data - To generate synthetic real-time transactions, I will use the Python library Faker. [Used in Grafana Project in MLOps Course]
 
 Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
 
