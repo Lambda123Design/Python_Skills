@@ -6,6 +6,8 @@ Python Faker Library used to create syntentic data - To generate synthetic real-
 
 Pytest library is used for unit testing. It is capable of executing Python unit test cases [Used in Automate Testing Workflow With Python in MLOps Course]
 
+"python-box" - A Python Library which can be used for Exception Handling
+
 Libraries: lxml, html5lib, beautifulsoup4, openpyxl, pickle
 
 1. **Basics Python:**
