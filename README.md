@@ -2059,7 +2059,7 @@ logging.warning("This is a warning message")
 logging.error("This is an error message")
 logging.critical("This is a critical message")
 
-# **54. Memory Management With Python**
+# **54. Memory Management In Python**
 
 **(i) Memory Allocation And Deallocation Garbage collection and Best Practises**
 
